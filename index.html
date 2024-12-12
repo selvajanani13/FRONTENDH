@@ -10,22 +10,18 @@
     <div class="container">
         <h1>My Habit Tracker</h1>
 
-        <!-- Habit List -->
-        <div class="habit-list">
-            <div class="habit-item">
-                <input type="checkbox" id="habit1">
-                <label for="habit1">Drink Water</label>
-            </div>
-            <div class="habit-item">
-                <input type="checkbox" id="habit2">
-                <label for="habit2">Exercise</label>
-            </div>
-            <div class="habit-item">
-                <input type="checkbox" id="habit3">
-                <label for="habit3">Read</label>
-            </div>
+        <!-- Add New Habit Form -->
+        <div class="add-habit">
+            <input type="text" id="newHabit" placeholder="Enter new habit" />
+            <button id="addHabitButton">Add Habit</button>
         </div>
 
+        <!-- Habit List -->
+        <div class="habit-list">
+            <ul id="habitList"></ul>
+        </div>
+
+        <!-- Save Progress -->
         <button id="saveButton">Save Progress</button>
         <div id="status"></div>
     </div>
