@@ -1,0 +1,15 @@
+{
+  "name": "frontendh",
+  "version": "1.0.0",
+  "description": "Habit Track",
+  "main": "script.js",
+  "scripts": {
+  "dev": "react-scripts start",  
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test"
+  
+  },
+  "author": "Selva Janani",
+  "license": "ISC"
+}
