@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Habit Tracker</h1>
-    <div id="app">
-        <form id="habit-form">
-            <input type="text" id="habit-input" placeholder="Enter a habit" required>
-            <button type="submit">Add Habit</button>
-        </form>
-        <ul id="habit-list"></ul>
+    <div class="container">
+        <h1>My Habit Tracker</h1>
+
+        <!-- Habit List -->
+        <div class="habit-list">
+            <div class="habit-item">
+                <input type="checkbox" id="habit1">
+                <label for="habit1">Drink Water</label>
+            </div>
+            <div class="habit-item">
+                <input type="checkbox" id="habit2">
+                <label for="habit2">Exercise</label>
+            </div>
+            <div class="habit-item">
+                <input type="checkbox" id="habit3">
+                <label for="habit3">Read</label>
+            </div>
+        </div>
+
+        <button id="saveButton">Save Progress</button>
+        <div id="status"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,14 +1,26 @@
-document.getElementById('habit-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+// Get elements
+const saveButton = document.getElementById('saveButton');
+const status = document.getElementById('status');
 
-    const habitInput = document.getElementById('habit-input');
-    const habitList = document.getElementById('habit-list');
+// Function to update habit status
+function saveHabitProgress() {
+    const habits = document.querySelectorAll('.habit-item input[type="checkbox"]');
+    let completedHabits = 0;
 
-    if (habitInput.value) {
-        const li = document.createElement('li');
-        li.textContent = habitInput.value;
+    habits.forEach(habit => {
+        if (habit.checked) {
+            completedHabits++;
+        }
+    });
 
-        habitList.appendChild(li);
-        habitInput.value = '';
+    if (completedHabits === habits.length) {
+        status.textContent = 'All habits completed today!';
+        status.style.color = 'green';
+    } else {
+        status.textContent = `${completedHabits} out of ${habits.length} habits completed.`;
+        status.style.color = 'orange';
     }
-});
+}
+
+// Event listener for Save button
+saveButton.addEventListener('click', saveHabitProgress);
